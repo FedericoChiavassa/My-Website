@@ -1,0 +1,25 @@
+$primary-color: #444;
+// $secondary-color: #75a89b;
+$secondary-color: hsl(165, 23%, 48%);
+// $bg-color: #f8f8f8;
+$bg-color: #ededed;
+// $bg-color: #75a89b;
+// $bg-color: #f9f5f1;
+// $bg-color: #b5c9d8;
+$bg-opacity: 0.8;
+$bg-color-projects: darken($bg-color, 15);
+// $bg-color-projects: #385268;
+$shadow-color: #dadada;
+$bg-clean: rgba(#f8f8f8, 1);
+
+@mixin easeOut {
+    transition: all 0.4s ease-out;
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff
+    }
+}

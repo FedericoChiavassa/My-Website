@@ -1,6 +1,291 @@
-$primary-color: #444;
+@import 'config';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+// html {
+//     font-size: 17px;
+// }
 
 body {
-    background: $primary-color; 
-    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: set-text-color($bg-color);
+    height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.txt-large {
+    font-size: 1.5rem;
+}
+
+// .color-2 {
+//     color: $secondary-color;
+// }
+
+.arrow {
+    position: absolute;
+    bottom: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    height: 39px;
+    width: 40px;
+    
+    &:hover {
+        @include easeOut();
+        background-color: $shadow-color ;
+    }
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    
+    ul {
+        text-align: right;
+        list-style: none;
+        text-align: center;
+        
+        li {
+            padding: 1rem;
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: black;
+                
+                &:hover {
+                    @include easeOut();
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+section {
+    position: relative;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    box-shadow: 0px 0px 15px $shadow-color;
+    /*background images*/
+    background-size: cover;
+    background-attachment: fixed;
+
+    p {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 4rem;
+    }
+
+    &#intro {
+        background-image: linear-gradient(to bottom, rgba($bg-color, 0), rgba($bg-color, 0)), url('../images/desk2.jpg');
+        justify-content: center;
+        background-attachment: scroll;
+        padding-top: 0;
+
+        .links {
+            padding: 8px 12px;
+            background: $bg-clean;
+            border-radius: 20px;
+            box-shadow: 0 0 3px $shadow-color;
+
+            a {
+                color: black;
+
+                .icon {
+                    vertical-align: -15%;
+
+                    &:hover {
+                        color: $secondary-color;
+                        @include easeOut();
+                    }
+                }
+            }
+
+            
+            
+        }
+    }
+
+    &#skills {
+        background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/keyboard.jpg');
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            justify-content: space-around;
+            padding-top: 5%;
+            
+            ul {
+                font-size: 2rem;
+                list-style-position: inside;
+    
+                li {
+                    text-align: left;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    &#projects {
+        // background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/keyboard.jpg');
+        background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity));
+        padding-top: 0;
+
+        .lead {
+            text-decoration: underline;
+        }
+
+        .projects-list {
+            display: grid;
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 1rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            grid-template-areas: 
+                "t1 p1"
+                "p2 t2"
+                "t3 p3";
+    
+            .project {
+                display: flex;
+                align-items: center;
+                padding: 0px;
+                background-image: linear-gradient(to bottom, rgba($bg-color-projects, 0.4), rgba($bg-color-projects, $bg-opacity));
+                // border: 1px solid $shadow-color;
+                // background-color: $bg-clean;
+    
+                max-width: 800px;
+    
+                .picture {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                    padding: 10px;
+
+                    img {
+                        width: 200px;
+                        border: 3px #fff solid;
+                    
+                        &:hover {
+                            @include easeOut();
+                            border-color: $secondary-color;
+                        }
+                    }
+
+                    a {
+                        width: 200px;
+                    }
+
+                    .btn-dark  {
+                        background-color: #000;
+                        color: #fff;
+                        text-decoration: none;
+                        @include easeOut();
+                        border-radius: 5px;
+                        padding: 3px 0;
+                        
+                        &:hover {
+                            background-color: $secondary-color;
+                            // color: set-text-color($secondary-color);
+                        }
+                    }
+                }
+    
+                .description {
+                    flex: 3;
+                    padding: 10px;
+                    padding-top: 0;
+                    padding-left: 1.5rem;
+
+                    h2 {
+                        text-align: left;
+                    }
+    
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        max-height:150px;
+                        list-style-position: inside;                        
+                        text-align: left;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .project1 {
+                grid-area: p1;
+            }
+
+            .project2 {
+                grid-area: p2;
+            }
+
+            .project3 {
+                grid-area: p3;
+            }
+            
+            .sm-lead {
+                display: grid;
+                align-self: stretch;
+                font-style: italic;
+                padding: 15px;
+                background-image: linear-gradient(to bottom, rgba($bg-color-projects, 0.3), rgba($bg-color-projects,0.3));
+                // background-color: $bg-clean;
+                // border: 1px $shadow-color solid;
+                
+                .txt-large {
+                    align-self: center;
+                    font-size: 1rem;
+                }
+            }
+
+            .txt-1 {
+                grid-area: t1;
+            }
+
+            .txt-2 {
+                grid-area: t2;
+            }
+
+            .txt-3 {
+                grid-area: t3;
+            }
+        }
+    }
+    
+    &#contact {
+        background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/usb3.jpg');
+        justify-content: center;
+    }
 }
