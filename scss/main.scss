@@ -1,4 +1,5 @@
 @import 'config';
+@import 'mobile';
 
 * {
     margin: 0;
@@ -6,12 +7,8 @@
     box-sizing: border-box;
   }
 
-// html {
-//     font-size: 17px;
-// }
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     color: set-text-color($bg-color);
     height: 100vh;
     line-height: 1.6;
@@ -49,19 +46,54 @@ body {
     }
 }
 
-.navbar {
+#menu-icon {
+    position: fixed;
+    top: 1rem;
+    right: 35px;
+    z-index: 2;
+    cursor: pointer;
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #000;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    &.change {
+        .bar1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        
+        .bar2 {
+            opacity: 0;
+        }
+        
+        .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
+}
+
+#navbar {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1;
+    @include easeOutSlow();
+    max-height: 0;
+    overflow: hidden;
+    font-family: "Comic Sans MS", sans-serif;
     
     ul {
-        text-align: right;
-        list-style: none;
+        padding-top: 55px;
         text-align: center;
+        list-style: none;
+        @include easeOut();
         
         li {
-            padding: 1rem;
+            padding: 1rem 0.8rem;
 
             a {
                 text-decoration: none;
@@ -71,10 +103,22 @@ body {
                 
                 &:hover {
                     @include easeOut();
-                    color: $secondary-color;
+                    color: white !important;
                 }
             }
         }
+    }
+
+    &:hover {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: rgba($secondary-color, 0.6);
+        @include easeOutSlow();
+    }
+
+    &.change {
+        max-height: 500px;
+        @include easeOutSlow();
     }
 }
 
@@ -107,10 +151,15 @@ section {
         background-attachment: scroll;
         padding-top: 0;
 
+        h1 {
+            margin-bottom: 1rem;
+        }
+
         .links {
-            padding: 8px 12px;
+            padding: 10px 15px;
             background: $bg-clean;
             border-radius: 20px;
+            margin-bottom: 1.5rem;
             box-shadow: 0 0 3px $shadow-color;
 
             a {
@@ -125,9 +174,6 @@ section {
                     }
                 }
             }
-
-            
-            
         }
     }
 
@@ -135,31 +181,37 @@ section {
         background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/keyboard.jpg');
 
         .skills-list {
-            display: flex;
-            flex-wrap: wrap;
             width: 80%;
+            padding-top: 3%;
+            display: flex;
             justify-content: space-around;
-            padding-top: 5%;
+            // flex-wrap: wrap;
             
             ul {
                 font-size: 2rem;
                 list-style-position: inside;
-    
+
+                h3 {
+                    text-align: left;
+                    padding: 5px;
+                    text-decoration: underline;
+                }
+                
                 li {
                     text-align: left;
-                    padding: 10px;
+                    padding: 10px 0;
                 }
             }
         }
     }
 
     &#projects {
-        // background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/keyboard.jpg');
         background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity));
         padding-top: 0;
 
         .lead {
             text-decoration: underline;
+            max-width: 80%;
         }
 
         .projects-list {
@@ -170,31 +222,33 @@ section {
             padding-top: 1rem;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 20px;
+            grid-gap: 1.2rem;
             grid-template-areas: 
-                "t1 p1"
+                "p1 t1"
                 "p2 t2"
-                "t3 p3";
+                "p3 t3";
     
             .project {
                 display: flex;
+                min-width: 560px;
                 align-items: center;
                 padding: 0px;
                 background-image: linear-gradient(to bottom, rgba($bg-color-projects, 0.4), rgba($bg-color-projects, $bg-opacity));
                 // border: 1px solid $shadow-color;
                 // background-color: $bg-clean;
     
-                max-width: 800px;
+                // max-width: 800px;
     
                 .picture {
                     display: flex;
                     flex: 1;
                     flex-direction: column;
-                    padding: 10px;
+                    padding: 1.2rem;  
+                    // padding-left: 2rem;
 
                     img {
                         width: 200px;
-                        border: 3px #fff solid;
+                        border: 4px #fff solid;
                     
                         &:hover {
                             @include easeOut();
@@ -225,17 +279,18 @@ section {
                     flex: 3;
                     padding: 10px;
                     padding-top: 0;
-                    padding-left: 1.5rem;
+                    padding-left: 1.2rem;
 
                     h2 {
                         text-align: left;
+                        text-decoration: underline;
                     }
     
                     ul {
                         display: flex;
                         flex-direction: column;
-                        flex-wrap: wrap;
-                        max-height:150px;
+                        // flex-wrap: wrap;
+                        // max-height:150px;
                         list-style-position: inside;                        
                         text-align: left;
                         font-size: 1.3rem;
@@ -287,5 +342,9 @@ section {
     &#contact {
         background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/usb3.jpg');
         justify-content: center;
+
+        a {
+            color: black;
+        }
     }
 }
