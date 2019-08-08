@@ -23,16 +23,18 @@
                 <li><a href="#contact" onclick="iconAnimation(this)">- Contact</a></li>
             </ul>
         </nav>
+
         <section id="intro">
             <h1>Federico <span class="color-2">Chiavassa</span></h1>
             <p class="links">
-                <span class="not-mobile">Resume: &nbsp;<a href="#!"></span><i class="icon fas fa-file-pdf fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
+                <span class="not-mobile">Resume: &nbsp;<a href="files/Federico-Chiavassa-Resume.pdf" target="_blank"></span><i class="icon fas fa-file-pdf fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
                 <span class="not-mobile">GitHub: &nbsp;<a href="https://github.com/FedericoChiavassa" target="_blank"></span><span></span><i class="icon fab fa-github fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
                 <span class="not-mobile">Email: &nbsp;<a href="#contact"></span><i class="icon fas fa-envelope fa-2x"></i></a>
             </p>
             <p class="txt-large">Full Stack Web Developer</p>
             <a class="arrow" href="#skills"><img src="images/arrow-down.png"></a>
         </section>
+
         <section id="skills">
             <h1>Skills</h1>
             <div class="skills-list">
@@ -64,15 +66,18 @@
             </div>
             <a class="arrow" href="#projects"><img src="images/arrow-down.png"></a>
         </section>
+
         <section id="projects">
             <h1>Projects</h1>
             <p class="txt-large lead">Three versions of the same project made with different technologies.</p>
+
             <ul class="projects-list">
                 <div class="sm-lead txt-1"><p class="txt-large">Blog Application where, if you register an account, you can...<br> create, update and delete your own posts.</p></div>
+
                 <li class="project project1">
                     <div class="picture">
                         <a href="#!">
-                            <img src="images/projects/project1.jpg" alt="project">
+                            <img src="images/projects/posts.png" onclick="openModal();currentSlide(1)" alt="project">
                         </a>
                         <a href="https://github.com/FedericoChiavassa" class="btn-dark" target="_blank">
                             <i class="fab fa-github"></i> Github
@@ -83,10 +88,11 @@
                         <ul class="txt-large"><li>React / Redux</li><li>Node.js / Express.js</li><li>MongoDB  / Mongoose</li><li>Bootstrap 4</li></ul>
                     </div>
                 </li>
+
                 <li class="project project2">
                     <div class="picture">
                         <a href="#!">
-                            <img src="images/projects/project2.jpg" alt="project">
+                            <img src="images/projects/post.png" onclick="openModal();currentSlide(2)" alt="project">
                         </a>
                         <a href="https://github.com/FedericoChiavassa" class="btn-dark" target="_blank">
                             <i class="fab fa-github"></i> Github
@@ -97,12 +103,14 @@
                         <ul class="txt-large"><li>React / Redux</li><li>Django REST Framework</li><li>SQlite</li><li>Bootstrap 4</li></ul>
                     </div>
                 </li>
+
                 <div class="sm-lead txt-2"><p class="txt-large">Frontend and Backend interact through a Web API.</p></div>
-                    <div class="sm-lead txt-3"><p class="txt-large">Download one of the projects from its Github to test it.</p></div>
+                <div class="sm-lead txt-3"><p class="txt-large">Download one of the projects from its Github to test it.</p></div>
+
                 <li class="project project3">
                     <div class="picture">
                         <a href="#!">
-                            <img src="images/projects/project3.jpg" alt="project">
+                            <img src="images/projects/dashboard.png" onclick="openModal();currentSlide(3)" alt="project">
                         </a>
                         <a href="https://github.com/FedericoChiavassa" class="btn-dark" target="_blank">
                             <i class="fab fa-github"></i> Github
@@ -114,13 +122,60 @@
                     </div>
                 </li>
             </ul>
+
             <a class="arrow" href="#contact"><img src="images/arrow-down.png"></a>
         </section>
+
         <section id="contact">
             <h1>Contact</h1><br>
             <p class="txt-large">Send me an email at: <a href="mailto:federico.chiavassa@hotmail.it"><i>federico.chiavassa@hotmail.it</i></a></p>
             <a class="arrow" href="#intro"><img src="images/arrow-up.png"></a>
         </section>
+
+        <div id="lightbox" class="modal">
+            <div class="modal-content">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                
+                <div class="mySlides">
+                    <div class="numbertext">1 / 7</div>
+                    <img src="images/projects/posts.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">2 / 7</div>
+                    <img src="images/projects/post.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">3 / 7</div>
+                    <img src="images/projects/dashboard.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">4 / 7</div>
+                    <img src="images/projects/create.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">5 / 7</div>
+                    <img src="images/projects/update.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">6 / 7</div>
+                    <img src="images/projects/login.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <div class="numbertext">7 / 7</div>
+                    <img src="images/projects/register.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
       </div>
 
       <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
