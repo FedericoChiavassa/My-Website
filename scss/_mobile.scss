@@ -1,4 +1,30 @@
-// Widescreens
+// Widescreens 4k
+@include media4k {
+
+    html {
+        font-size: 2.5rem;
+
+        #menu-icon {
+            right: 120px;
+        }
+    }
+
+}
+
+// Widescreens 2k
+@include media2k {
+
+    html {
+        font-size: 1.5rem;
+
+        #menu-icon {
+            right: 65px;
+        }
+    }
+
+}
+
+// HD screen
 @include mediaXl {
 
 }
@@ -11,17 +37,7 @@
 
             &#intro {
                 background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
-            }
-
-            &#skills {
-                .skills-list {
-                    ul {
-                        li {
-                            min-width: 235px;
-                        }
-                    }  
-                }
-            }            
+            }         
         }
     }
 }
@@ -146,14 +162,17 @@
             }
 
             &#skills {
+                background-image: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1)), url('../images/keyboard.jpg');
                 background-attachment: scroll;
                 min-height: 0;
-
+                
                 .arrow {
                     display: none;
                 }
-
+                
                 .skills-list {
+                    justify-content: space-between;
+
                     ul {
                         font-size: 1rem ;
                         list-style: none;
@@ -163,9 +182,15 @@
                         }
 
                         li {
-                            padding: 10px 4px;
-                            border: 1px solid $shadow-color;
-                            background-color: $bg-clean;
+                            padding: 10px 5px;
+                            // border: 1px solid $shadow-color;
+                            // background-color: $bg-clean;
+                            margin-left: 15px;
+
+                            &::before {
+                                left: -15px;
+                                width: 15px; 
+                            }
                         }
                     }
                     
@@ -219,9 +244,10 @@
 
             &#contact {
                 background-attachment: scroll;
-                min-height: 0;
+                min-height: 60vh;
                 
                 p {
+                    max-width: 80%;
                     font-size: 1.3rem;
                 }
             }

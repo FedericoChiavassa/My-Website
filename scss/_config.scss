@@ -1,9 +1,12 @@
 $primary-color: #444;
 $secondary-color: hsl(165, 23%, 48%);
-$bg-color: #ededed;
+$bg-color: #eeeeee;
+// $bg-color: #ededed;
 // $bg-color: #f8f8f8;
 // $bg-color: #75a89b;
 // $bg-color: #385268;
+// $bg-color: #f8f8f8;
+$bg-color-2: #e8e8e8;
 $bg-opacity: 0.8;
 $bg-color-projects: darken($bg-color, 15);
 $shadow-color: #dadada;
@@ -26,8 +29,20 @@ $bg-clean: #f8f8f8;
 }
 
 //  Media Query  Mixins
+@mixin media4k {
+    @media screen and (min-width: 3000px) {
+        @content;
+    }
+}
+
+@mixin media2k {
+    @media screen and (min-width: 2000px) and (max-width: 2999px) {
+        @content;
+    }
+}
+
 @mixin mediaXl {
-    @media screen and (min-width: 1385px) {
+    @media screen and (min-width: 1385px) and (max-width: 1999px) {
         @content;
     }
 }
