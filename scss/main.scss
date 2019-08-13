@@ -45,7 +45,7 @@ body {
 #menu-icon {
     position: fixed;
     top: 1rem;
-    right: 35px;
+    right: 45px;
     z-index: 2;
     cursor: pointer;
     
@@ -87,12 +87,13 @@ body {
         text-align: center;
         list-style: none;
         @include easeOut();
+        min-width: 140px;
         
         li {
             
             a {
                 display: block;
-                padding: 1rem 0.8rem;
+                padding: 1rem 0.4rem;
                 width: 100%;
                 height: 100%;
                 text-decoration: none;
@@ -141,18 +142,7 @@ section {
     }
     
     h1 {
-        // position: relative;
         font-size: 4rem;
-
-        // &::after {
-        //     background-color: $secondary-color; 
-        //     bottom: 5px;
-        //     content: '';
-        //     display: block;
-        //     height: 5px;
-        //     position: absolute;
-        //     width: 100%;
-        // }
     }
 
     &#intro {
@@ -184,6 +174,15 @@ section {
                         @include easeOut();
                     }
                 }
+            }
+        }
+
+        .flag {
+            display: inline-block;
+            margin: 1rem 1.5rem;
+
+            img {
+                height: 1.4rem;
             }
         }
     }
@@ -239,7 +238,7 @@ section {
     &#projects {
         background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity));
         // background-image: linear-gradient(to bottom, rgba(white, $bg-opacity), rgba(white, $bg-opacity));
-        padding-top: 0;
+        padding-top: 1rem;
 
         .lead {
             // text-decoration: underline;
@@ -406,8 +405,7 @@ section {
         position: relative;
         margin: auto;
         padding: 0;
-        width: 90%;
-        max-width: 1200px;
+        width: 70%;
         user-select: none;
         animation-name: zoom;
         animation-duration: 0.6s;

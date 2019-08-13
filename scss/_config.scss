@@ -29,20 +29,8 @@ $bg-clean: #f8f8f8;
 }
 
 //  Media Query  Mixins
-@mixin media4k {
-    @media screen and (min-width: 3000px) {
-        @content;
-    }
-}
-
-@mixin media2k {
-    @media screen and (min-width: 2000px) and (max-width: 2999px) {
-        @content;
-    }
-}
-
 @mixin mediaXl {
-    @media screen and (min-width: 1385px) and (max-width: 1999px) {
+    @media screen and (min-width: 1385px) {
         @content;
     }
 }

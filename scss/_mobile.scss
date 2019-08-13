@@ -1,30 +1,4 @@
-// Widescreens 4k
-@include media4k {
-
-    html {
-        font-size: 2.5rem;
-
-        #menu-icon {
-            right: 120px;
-        }
-    }
-
-}
-
-// Widescreens 2k
-@include media2k {
-
-    html {
-        font-size: 1.5rem;
-
-        #menu-icon {
-            right: 65px;
-        }
-    }
-
-}
-
-// HD screen
+// Widescreens
 @include mediaXl {
 
 }
@@ -165,6 +139,10 @@
                 background-image: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1)), url('../images/keyboard.jpg');
                 background-attachment: scroll;
                 min-height: 0;
+
+                h1 {
+                    font-size: 3rem;
+                }
                 
                 .arrow {
                     display: none;
@@ -198,6 +176,10 @@
             }
 
             &#projects {
+
+                h1 {
+                    font-size: 3rem;
+                }
 
                 .arrow {
                     display: none;
@@ -245,6 +227,10 @@
             &#contact {
                 background-attachment: scroll;
                 min-height: 60vh;
+
+                h1 {
+                    font-size: 3rem;
+                }
                 
                 p {
                     max-width: 80%;

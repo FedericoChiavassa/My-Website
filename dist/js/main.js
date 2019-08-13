@@ -53,3 +53,55 @@ onkeydown = function escFunc(event) {
         document.getElementById("lightbox").style.display = "none";
     }
 }
+
+
+// Languages Translation
+const ita = document.getElementById("btn-ita");
+const eng = document.getElementById("btn-eng");
+
+ita.onclick = function() {
+    window.location.hash = "#ita";
+    location.reload();
+}
+
+eng.onclick = function() {
+    window.location.hash = "#eng";
+    location.reload();
+}
+
+const language = {
+    ita: {
+        resume: "Curriculum",
+        skills: "Competenze",
+        projects: "Progetti",
+        contact: "Contatto",
+        languages: "Linguaggi",
+        others: "Altro",
+        lead: "Tre versioni dello stesso progetto create con tecnologie diverse.",
+        desc1: "Applicazione Blog dove, registrando un tuo account, puoi...",
+        desc1b: "creare, aggiornare e cancellare i tuoi post.",
+        desc2: "Frontend e Backend interagiscono attraverso una Web API.",
+        desc3: "Scarica uno dei progetti dal suo Github per testarlo.",
+        send: "Mandami un'email a"
+    }
+}
+
+if (window.location.hash) {
+    if (window.location.hash === "#ita") {
+        txt_resume.textContent = language.ita.resume;
+        txt_skills_menu.textContent = language.ita.skills;
+        txt_skills_title.textContent = language.ita.skills;
+        txt_projects_menu.textContent = language.ita.projects;
+        txt_projects_title.textContent = language.ita.projects;
+        txt_contact_menu.textContent = language.ita.contact;
+        txt_contact_title.textContent = language.ita.contact;
+        txt_languages.textContent = language.ita.languages;
+        txt_others.textContent = language.ita.others;
+        txt_lead.textContent = language.ita.lead;
+        txt_desc1.textContent = language.ita.desc1;
+        txt_desc1b.textContent = language.ita.desc1b;
+        txt_desc2.textContent = language.ita.desc2;
+        txt_desc3.textContent = language.ita.desc3;
+        txt_send.textContent = language.ita.send;
+    }
+}

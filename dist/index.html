@@ -18,28 +18,37 @@
         <nav id="navbar" class="change">
             <ul id="menu-list">
                 <li><a href="#intro" onclick="iconAnimation(this)">- Intro</a></li>
-                <li><a href="#skills" onclick="iconAnimation(this)">- Skills</a></li>
-                <li><a href="#projects" onclick="iconAnimation(this)">- Projects</a></li>
-                <li><a href="#contact" onclick="iconAnimation(this)">- Contact</a></li>
+                <li><a href="#skills" onclick="iconAnimation(this)">- <span id="txt_skills_menu">Skills</span></a></li>
+                <li><a href="#projects" onclick="iconAnimation(this)">- <span id="txt_projects_menu">Projects</span></a></li>
+                <li><a href="#contact" onclick="iconAnimation(this)">- <span id="txt_contact_menu">Contact</span></a></li>
             </ul>
         </nav>
 
         <section id="intro">
-            <h1>Federico <span class="color-2">Chiavassa</span></h1>
+            <h1>Federico Chiavassa</h1>
             <p class="links">
-                <span class="not-mobile">Resume: &nbsp;<a href="files/Federico-Chiavassa-Resume.pdf" target="_blank"></span><i class="icon fas fa-file-pdf fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
-                <span class="not-mobile">GitHub: &nbsp;<a href="https://github.com/FedericoChiavassa" target="_blank"></span><span></span><i class="icon fab fa-github fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
-                <span class="not-mobile">Email: &nbsp;<a href="#contact"></span><i class="icon fas fa-envelope fa-2x"></i></a>
+                <span class="not-mobile"><span id="txt_resume">
+                    Resume</span>: &nbsp;<a href="files/Federico-Chiavassa-Resume.pdf" target="_blank"></span><i class="icon fas fa-file-pdf fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
+                
+                <span class="not-mobile">
+                    GitHub: &nbsp;<a href="https://github.com/FedericoChiavassa" target="_blank"></span><i class="icon fab fa-github fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
+                
+                <span class="not-mobile">
+                    Email: &nbsp;<a href="#contact"></span><i class="icon fas fa-envelope fa-2x"></i></a>
             </p>
             <p class="txt-large">Full Stack Web Developer</p>
+            <div>
+                <a class="flag" href="#ita" id="btn-ita"><img src="images/italy-flag.png" alt="flag-ita"></a>
+                <a class="flag" href="#eng" id="btn-eng"><img src="images/uk-flag.png" alt="flag-uk"></a>
+            </div>
             <a class="arrow" href="#skills"><img src="images/arrow-down.png"></a>
         </section>
 
         <section id="skills">
-            <h1>Skills</h1>
+            <h1><span id="txt_skills_title">Skills</span></h1>
             <div class="skills-list">
                 <ul>
-                    <h3>Languages</h3>
+                    <h3><span id="txt_languages">Languages</span></h3>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Sass</li>
@@ -55,7 +64,7 @@
                     <li>Express.js</li>
                     <li>Bootstrap 4</li>
                 </ul><ul>
-                    <h3>Others</h3>    
+                    <h3><span id="txt_others">Others</span></h3>    
                     <li>Node.js</li>
                     <li>Web APIs</li>
                     <li>Git</li>
@@ -68,11 +77,16 @@
         </section>
 
         <section id="projects">
-            <h1>Projects</h1>
-            <p class="txt-large lead">Three versions of the same project made with different technologies.</p>
+            <h1><span id="txt_projects_title">Projects</span></h1>
+            <p class="txt-large lead" id="txt_lead">Three versions of the same project made with different technologies.</p>
 
             <ul class="projects-list">
-                <div class="sm-lead txt-1"><p class="txt-large">Blog Application where, if you register an account, you can...<br> create, update and delete your own posts.</p></div>
+                <div class="sm-lead txt-1">
+                    <p class="txt-large">
+                        <span id="txt_desc1">Blog Application where, if you register an account, you can...</span><br>
+                        <span id="txt_desc1b"> create, update and delete your own posts.</span>
+                    </p>
+                </div>
 
                 <li class="project project1">
                     <div class="picture">
@@ -104,8 +118,8 @@
                     </div>
                 </li>
 
-                <div class="sm-lead txt-2"><p class="txt-large">Frontend and Backend interact through a Web API.</p></div>
-                <div class="sm-lead txt-3"><p class="txt-large">Download one of the projects from its Github to test it.</p></div>
+                <div class="sm-lead txt-2"><p class="txt-large" id="txt_desc2">Frontend and Backend interact through a Web API.</p></div>
+                <div class="sm-lead txt-3"><p class="txt-large" id="txt_desc3">Download one of the projects from its Github to test it.</p></div>
 
                 <li class="project project3">
                     <div class="picture">
@@ -127,8 +141,8 @@
         </section>
 
         <section id="contact">
-            <h1>Contact</h1><br>
-            <p class="txt-large">Send me an email at: <a href="mailto:federico.chiavassa@hotmail.it"><i>federico.chiavassa@hotmail.it</i></a></p>
+            <h1><span id="txt_contact_title">Contact</span></h1><br>
+            <p class="txt-large"><span id="txt_send">Send me an email at</span>: <a href="mailto:federico.chiavassa@hotmail.it"><i>federico.chiavassa@hotmail.it</i></a></p>
             <a class="arrow" href="#intro"><img src="images/arrow-up.png"></a>
         </section>
 
