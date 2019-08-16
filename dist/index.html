@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/627ba10bad.js"></script>
     <title>Federico Chiavassa | Web Developer</title>
@@ -27,14 +28,20 @@
         <section id="intro">
             <h1>Federico Chiavassa</h1>
             <p class="links">
-                <span class="not-mobile"><span id="txt_resume">
-                    Resume</span>: &nbsp;<a href="files/Federico-Chiavassa-Resume.pdf" target="_blank"></span><i class="icon fas fa-file-pdf fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
+                <span class="not-mobile">
+                    <span id="txt_resume">Resume</span>: &nbsp;
+                </span>
+                <a href="files/Federico-Chiavassa-Resume.pdf" target="_blank"><i class="icon fas fa-file-pdf fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
                 
                 <span class="not-mobile">
-                    GitHub: &nbsp;<a href="https://github.com/FedericoChiavassa" target="_blank"></span><i class="icon fab fa-github fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
+                    GitHub: &nbsp;
+                </span>
+                <a href="https://github.com/FedericoChiavassa" target="_blank"><i class="icon fab fa-github fa-2x"></i></a>&nbsp;&nbsp; | &nbsp;
                 
                 <span class="not-mobile">
-                    Email: &nbsp;<a href="#contact"></span><i class="icon fas fa-envelope fa-2x"></i></a>
+                    Email: &nbsp;
+                </span>
+                <a href="#contact"><i class="icon fas fa-envelope fa-2x"></i></a>
             </p>
             <p class="txt-large">Full Stack Web Developer</p>
             <div>
@@ -49,28 +56,28 @@
             <div class="skills-list">
                 <ul>
                     <h3><span id="txt_languages">Languages</span></h3>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Sass</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>Python</li>
+                    <li data-aos="fade-left">HTML</li>
+                    <li data-aos="fade-left">CSS</li>
+                    <li data-aos="fade-left">Sass</li>
+                    <li data-aos="fade-left">JavaScript</li>
+                    <li data-aos="fade-left">PHP</li>
+                    <li data-aos="fade-left">Python</li>
                 </ul><ul> 
                     <h3>Frameworks</h3>
-                    <li>React</li>
-                    <li>Vue.js</li>
-                    <li>Laravel</li>
-                    <li>Django</li>
-                    <li>Express.js</li>
-                    <li>Bootstrap 4</li>
+                    <li data-aos="fade-left">React</li>
+                    <li data-aos="fade-left">Vue.js</li>
+                    <li data-aos="fade-left">Laravel</li>
+                    <li data-aos="fade-left">Django</li>
+                    <li data-aos="fade-left">Express.js</li>
+                    <li data-aos="fade-left">Bootstrap 4</li>
                 </ul><ul>
                     <h3><span id="txt_others">Others</span></h3>    
-                    <li>Node.js</li>
-                    <li>Web APIs</li>
-                    <li>Git</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                    <li>Grid/Flexbox</li>
+                    <li data-aos="fade-left">Node.js</li>
+                    <li data-aos="fade-left">Web APIs</li>
+                    <li data-aos="fade-left">Git</li>
+                    <li data-aos="fade-left">MySQL</li>
+                    <li data-aos="fade-left">MongoDB</li>
+                    <li data-aos="fade-left">Grid/Flexbox</li>
                 </ul>
             </div>
             <a class="arrow" href="#projects"><img src="images/arrow-down.png"></a>
@@ -81,14 +88,8 @@
             <p class="txt-large lead" id="txt_lead">Three versions of the same project made with different technologies.</p>
 
             <ul class="projects-list">
-                <div class="sm-lead txt-1">
-                    <p class="txt-large">
-                        <span id="txt_desc1">Blog Application where, if you register an account, you can...</span><br>
-                        <span id="txt_desc1b"> create, update and delete your own posts.</span>
-                    </p>
-                </div>
-
-                <li class="project project1">
+                
+                <li class="project project1" data-aos="fade-left">
                     <div class="picture">
                         <a href="#!">
                             <img src="images/projects/posts.png" onclick="openModal();currentSlide(1)" alt="project">
@@ -103,7 +104,14 @@
                     </div>
                 </li>
 
-                <li class="project project2">
+                <div class="sm-lead txt-1" data-aos="fade-left">
+                    <p class="txt-large">
+                        <span id="txt_desc1">Blog Application where, if you register an account, you can...</span><br>
+                        <span id="txt_desc1b"> create, update and delete your own posts.</span>
+                    </p>
+                </div>
+                
+                <li class="project project2" data-aos="fade-left">
                     <div class="picture">
                         <a href="#!">
                             <img src="images/projects/post.png" onclick="openModal();currentSlide(2)" alt="project">
@@ -117,11 +125,10 @@
                         <ul class="txt-large"><li>React / Redux</li><li>Django REST Framework</li><li>SQlite</li><li>Bootstrap 4</li></ul>
                     </div>
                 </li>
-
-                <div class="sm-lead txt-2"><p class="txt-large" id="txt_desc2">Frontend and Backend interact through a Web API.</p></div>
-                <div class="sm-lead txt-3"><p class="txt-large" id="txt_desc3">Download one of the projects from its Github to test it.</p></div>
-
-                <li class="project project3">
+                
+                <div class="sm-lead txt-2" data-aos="fade-left"><p class="txt-large" id="txt_desc2">Frontend and Backend interact through a Web API.</p></div>
+                
+                <li class="project project3" data-aos="fade-left">
                     <div class="picture">
                         <a href="#!">
                             <img src="images/projects/dashboard.png" onclick="openModal();currentSlide(3)" alt="project">
@@ -135,14 +142,16 @@
                         <ul class="txt-large"><li>Vue.js / Vuex</li><li>Laravel</li><li>MySql</li><li>Bootstrap 4</li></ul>
                     </div>
                 </li>
-            </ul>
 
+                <div class="sm-lead txt-3" data-aos="fade-left"><p class="txt-large" id="txt_desc3">Download one of the projects from its Github to test it.</p></div>
+            </ul>
+            
             <a class="arrow" href="#contact"><img src="images/arrow-down.png"></a>
         </section>
 
         <section id="contact">
-            <h1><span id="txt_contact_title">Contact</span></h1><br>
-            <p class="txt-large"><span id="txt_send">Send me an email at</span>: <a href="mailto:federico.chiavassa@hotmail.it"><i>federico.chiavassa@hotmail.it</i></a></p>
+            <h1 data-aos="zoom-in"><span id="txt_contact_title">Contact</span></h1><br>
+            <p class="txt-large" data-aos="zoom-in"><span id="txt_send">Send me an email at</span>: <a href="mailto:federico.chiavassa@hotmail.it"><i>federico.chiavassa@hotmail.it</i></a></p>
             <a class="arrow" href="#intro"><img src="images/arrow-up.png"></a>
         </section>
 
@@ -192,7 +201,17 @@
 
       </div>
 
-      <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-      <script src="./js/main.js" ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ 
+            disable: 'mobile',
+            once: true,
+            easing: 'ease-out',
+            duration: 800,
+            offset: 50
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/main.js" ></script>
 </body>
 </html>

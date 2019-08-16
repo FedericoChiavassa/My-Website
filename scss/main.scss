@@ -5,12 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 body {
     font-family: Helvetica, sans-serif;
     color: set-text-color($bg-color);
-    height: 100vh;
+    // height: 100vh;
     line-height: 1.6;
 }
 
@@ -53,8 +53,9 @@ body {
         width: 35px;
         height: 5px;
         background-color: #000;
+        border-radius: 5px;
         margin: 6px 0;
-        transition: 0.4s;
+        transition: 0.4s ease-out;
     }
     
     &.change {
@@ -118,21 +119,20 @@ body {
 
     &.change {
         max-height: 800px;
-        @include easeOutSlow();
     }
 }
 
 section {
+    outline: none;
     position: relative;
-    display: flex;  
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
+    // width: 100%;
     min-height: 100vh;
     padding-top: 3rem;
     padding-bottom: 5rem;
-    // box-shadow: 0px 0px 15px $shadow-color;
     /*background images*/
     background-size: cover;
     background-attachment: fixed;
@@ -146,8 +146,7 @@ section {
     }
 
     &#intro {
-        background-image: linear-gradient(to bottom, rgba($bg-color, 0), rgba($bg-color, 0)), url('../images/desk2.jpg');
-        // background-image: linear-gradient(to bottom, rgba(white,  $bg-opacity), rgba(white,  $bg-opacity)), url('../images/desk2.jpg');
+        background: linear-gradient(to bottom, rgba($bg-color, 0), rgba($bg-color, 0)), url('../images/desk2.jpg') left top/cover no-repeat;
         justify-content: center;
         background-attachment: scroll;
         padding-top: 0;
@@ -157,6 +156,8 @@ section {
         }
 
         .links {
+            height: 52px;
+            width: 400px;
             padding: 10px 15px;
             background: $bg-clean;
             border-radius: 20px;
@@ -189,8 +190,9 @@ section {
 
     &#skills {
         // background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/keyboard.jpg');
-        background-image: linear-gradient(to bottom, rgba($bg-color-2, 0.8), rgba($bg-color-2, 0.8)), url('../images/keyboard.jpg');
-        // background-image: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1)), url('../images/keyboard.jpg');
+        // background-image: linear-gradient(to bottom, rgba($bg-color-2, 0.8), rgba($bg-color-2, 0.8)), url('../images/keyboard.jpg');
+        background: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1)), url('../images/keyboard.jpg');
+        // background: linear-gradient(to bottom, rgba($bg-color-2, $bg-opacity), rgba($bg-color-2, $bg-opacity)), url('../images/keyboard.jpg') left top/cover no-repeat;
 
         .skills-list {
             width: 80%;
@@ -214,9 +216,7 @@ section {
                     text-align: left;
                     padding: 10px 0;
                     padding-left: 20px;
-                    // background-color: $bg-clean;
                     margin: 10px 0;
-                    // box-shadow: 0 0 3px $shadow-color;
                     margin-left: 20px;
 
                     &::before {
@@ -225,7 +225,6 @@ section {
                         left: -20px;
                         content: '';
                         display: block;
-                        height: 4px;
                         position: absolute;
                         width: 20px;
                         height: 40%;
@@ -236,12 +235,10 @@ section {
     }
 
     &#projects {
-        background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity));
-        // background-image: linear-gradient(to bottom, rgba(white, $bg-opacity), rgba(white, $bg-opacity));
+        background: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity));
         padding-top: 1rem;
 
         .lead {
-            // text-decoration: underline;
             max-width: 80%;
         }
 
@@ -264,8 +261,8 @@ section {
                 min-width: 560px;
                 align-items: center;
                 padding: 0px;
-                // background-image: linear-gradient(to bottom, rgba($bg-color-projects, 0.4), rgba($bg-color-projects, $bg-opacity));
-                background-image: linear-gradient(to bottom, rgba($bg-color-projects, 0.4), rgba($bg-color-projects, 0.7));
+                background: linear-gradient(to bottom, rgba($bg-color-projects, 0.4), rgba($bg-color-projects, 0.7));
+                // height: 209px;
     
                 .picture {
                     display: flex;
@@ -277,6 +274,7 @@ section {
                         width: 227px;
                         height: 132px;
                         border: 4px $secondary-color solid;
+                        overflow: hidden;
                         
                         &:hover {
                             border: none;
@@ -285,6 +283,7 @@ section {
 
                     a {
                         width: 227px;
+                        overflow: hidden;
                     }
 
                     .btn-dark  {
@@ -350,7 +349,7 @@ section {
                 align-self: stretch;
                 font-style: italic;
                 padding: 15px;
-                background-image: linear-gradient(to bottom, rgba($bg-color-projects, 0.3), rgba($bg-color-projects, 0.3));
+                background: linear-gradient(to bottom, rgba($bg-color-projects, 0.3), rgba($bg-color-projects, 0.3));
                 
                 .txt-large {
                     align-self: center;
@@ -373,8 +372,7 @@ section {
     }
     
     &#contact {
-        background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/usb3.jpg');
-        // background-image: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1)), url('../images/usb3.jpg');
+        background: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/usb3.jpg') left top/cover no-repeat;
         justify-content: center;
 
         a {

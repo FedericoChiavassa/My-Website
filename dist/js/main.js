@@ -1,6 +1,7 @@
 // SmoothScroll Script
 const scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 600
+    speed: 800
+    // speedAsDuration: true
 });
 
 // Menu-icon Animation
