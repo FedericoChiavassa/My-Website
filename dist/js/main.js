@@ -1,7 +1,35 @@
 // SmoothScroll Script
 const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800
-    // speedAsDuration: true
+});
+
+
+// Navbar Update on Scroll
+const intro = document.getElementById('intro');
+const skills = document.getElementById('skills');
+const projects = document.getElementById('projects');
+const contact = document.getElementById('contact');
+const sections = [ intro, skills, projects, contact];
+
+const introMenu = document.getElementById('menu-intro');
+const skillsMenu = document.getElementById('menu-skills');
+const projectsMenu = document.getElementById('menu-projects');
+const contactMenu = document.getElementById('menu-contact');
+const menu = [ introMenu, skillsMenu, projectsMenu, contactMenu];
+
+window.addEventListener('scroll', function (e){
+    for (i = 0; i < sections.length; i++)  {
+
+        sections[i].posTop = sections[i].getBoundingClientRect().top;
+        sections[i].posBottom = sections[i].getBoundingClientRect().bottom;
+
+        if( sections[i].posTop < 1 && sections[i].posBottom > -1) {
+            for(x = 0; x < menu.length; x++) {
+                menu[x].classList.remove("active");
+            }
+            menu[i].classList.add("active");
+        }
+    }
 });
 
 // Menu-icon Animation
