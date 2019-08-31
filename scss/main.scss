@@ -132,11 +132,9 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    // width: 100%;
     min-height: 100vh;
     padding-top: 3rem;
     padding-bottom: 5rem;
-    /*background images*/
     background-size: cover;
     background-attachment: fixed;
 
@@ -192,10 +190,7 @@ section {
     }
 
     &#skills {
-        // background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/keyboard.jpg');
-        // background-image: linear-gradient(to bottom, rgba($bg-color-2, 0.8), rgba($bg-color-2, 0.8)), url('../images/keyboard.jpg');
         background: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1)), url('../images/keyboard.jpg');
-        // background: linear-gradient(to bottom, rgba($bg-color-2, $bg-opacity), rgba($bg-color-2, $bg-opacity)), url('../images/keyboard.jpg') left top/cover no-repeat;
 
         .skills-list {
             width: 80%;
@@ -265,7 +260,6 @@ section {
                 align-items: center;
                 padding: 0px;
                 background: linear-gradient(to bottom, rgba($bg-color-projects, 0.4), rgba($bg-color-projects, 0.7));
-                // height: 209px;
     
                 .picture {
                     display: flex;
