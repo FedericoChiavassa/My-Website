@@ -192,6 +192,7 @@ section {
 
     &#skills {
         background: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1));
+        justify-content: center;
 
         .skills-list {
             width: 80%;
@@ -235,6 +236,7 @@ section {
 
     &#projects {
         background: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity));
+        justify-content: center;
         padding-top: 1rem;
 
         .lead {

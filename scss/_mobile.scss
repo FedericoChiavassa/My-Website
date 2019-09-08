@@ -1,6 +1,10 @@
 // Widescreens
 @include mediaXl {
-
+    body {
+        #navbar {
+            font-family: Helvetica, sans-serif;
+        }      
+    }
 }
 
 // Desktop & Laptops
@@ -10,7 +14,7 @@
         section {
 
             &#intro {
-                background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
+                background: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
             }         
         }
     }
@@ -22,7 +26,7 @@
     body {   
         section {
             &#intro {
-                background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
+                background: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
 
                 h1 {
                     font-size: 3.5rem;
@@ -119,7 +123,7 @@
             padding-top: 30px !important; 
 
             &#intro {
-                background-image: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
+                background: linear-gradient(to bottom, rgba($bg-color, $bg-opacity), rgba($bg-color, $bg-opacity)), url('../images/desk2.jpg');
                 padding: 0 20px;
 
                 h1 {
@@ -158,15 +162,28 @@
 
                         h3 {
                             font-size: 14px;
+                            text-align: center;
                         }
 
                         li {
-                            padding: 10px 5px;
-                            margin-left: 10px;
+                            padding-left: 0;
+                            margin-left: 0;
+                            text-align: center;
 
                             &::before {
-                                left: -10px;
-                                width: 10px; 
+                                display: none;
+                            }
+
+                            &::after {
+                                background-color: $secondary-color; 
+                                bottom: 0;
+                                left: 5%;
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                width: 90%;
+                                height: 3px;
+                                border-radius: 5px;
                             }
                         }
                     }
@@ -224,6 +241,7 @@
             }
 
             &#contact {
+                background: linear-gradient(to bottom, rgba($bg-color-2, 1), rgba($bg-color-2, 1));
                 background-attachment: scroll;
                 min-height: 60vh;
 
