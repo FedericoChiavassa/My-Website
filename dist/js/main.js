@@ -109,7 +109,7 @@ const language = {
         lead: "Tre versioni dello stesso progetto create con tecnologie diverse.",
         desc1: "Applicazione Blog dove, registrando un tuo account, puoi...",
         desc1b: "creare, aggiornare e cancellare i tuoi post.",
-        desc2: "Frontend e Backend interagiscono attraverso una Web API.",
+        desc2: "Frontend e Backend interagiscono attraverso una REST API.",
         desc3: "Scarica uno dei progetti dal suo Github per testarlo.",
         send: "Mandami un'email a"
     }
